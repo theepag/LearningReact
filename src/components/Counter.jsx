@@ -27,8 +27,10 @@ class Counter extends Component {
   };
 
   render() {
+    console.log("prob", this.props);
     return (
       <div>
+        {this.props.children}
         <span className={this.getBadgeClasses()}>{this.state.value} </span>
 
         <button
