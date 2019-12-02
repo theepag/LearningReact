@@ -3,6 +3,6 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Counter from "./components/Counter";
+import Counters from "./components/Counters";
 
-ReactDOM.render(<Counter />, document.getElementById("root"));
+ReactDOM.render(<Counters />, document.getElementById("root"));
