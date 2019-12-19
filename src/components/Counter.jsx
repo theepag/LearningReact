@@ -2,13 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    value: this.props.value,
-    imgUrl: "https://picsum.photos/400",
-    tags: []
-  };
-  style = {
-    fontSize: 40,
-    fontWeight: "bold"
+    value: this.props.value
   };
 
   renderTags() {
@@ -29,7 +23,6 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        {this.props.children}
         <span className={this.getBadgeClasses()}>{this.state.value} </span>
 
         <button
@@ -41,10 +34,9 @@ class Counter extends Component {
           Increament
         </button>
         <button
-          onClick={this.props.onDelete}
+          onClick={() => this.props.onDelete(this.props.id)}
           className="btn btn-danger btn-sm m-2"
         >
-          {" "}
           Delete
         </button>
       </div>
